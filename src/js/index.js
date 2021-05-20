@@ -1,6 +1,6 @@
-console.log("connected");
+/* console.log("connected");
 const content = element.innerHTML;
-element.innerHTML = htmlString;
+element.innerHTML = htmlString; */
 
 const questions = [
   {
@@ -15,8 +15,7 @@ const questions = [
     question: "Who was the best president ever?",
     A: "Obama whatever-his-last-name-was",
     B: "President number #53",
-    C:
-      "Everybody likes George Washington but I don't really know what he did ... so him maybe?",
+    C:"Everybody likes George Washington but I don't really know what he did ... so him maybe?",
     D: "how many presidents were there? 50? 58?",
     correct: "D",
   },
@@ -73,8 +72,7 @@ const questions = [
     A: "The British Tea Party because british people can't have tea now",
     B: "The Constitution because it made America and that's where I live",
     C: "Covid-19 because I was alive for it and I'm important",
-    D:
-      "Going to the moon was cool but a boy in my class told me it wasn't real",
+    D:"Going to the moon was cool but a boy in my class told me it wasn't real",
     correct: "A",
   },
   {
@@ -123,7 +121,7 @@ function showResults() {
   /* answer containers */
   const answerContainers = quizContainer.querySelectorAll(".answers");
 
-  /*record of answers per question/ find answer*/
+  /*record of answers per question or find answer*/
   let numCorrect = 0;
   questions.forEach((currentQuestion, questionNumber) => {
     const answerContainer = answerContainers[questionNumber];
@@ -135,14 +133,14 @@ function showResults() {
       numCorrect++;
       answerContainers[questionNumber].style.color = "lightgreen";
     } else {
-      /* if answer is */
+      /* if answer is wrong */
       answerContainers[questionNumber].style.color = "red";
     }
   });
 
   /* # correct for end of quiz */
   resultsContainer.innerHTML = `${numCorrect} out of ${questions.length}`;
-}
+  }
 
 function showSlide(n) {
   slides[currentSlide].classList.remove("active-slide");
